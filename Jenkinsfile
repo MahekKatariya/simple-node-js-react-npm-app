@@ -5,6 +5,7 @@ pipeline {
             agent { dockerfile true }
             steps{
             echo "port:3000"
+            sh 'docker stop demo_node'
             sh 'docker rm demo_node'
             sh 'docker build -t dockernode .'
             sh 'docker run --name=demo_node -p 5000:5000 -d dockernode'
