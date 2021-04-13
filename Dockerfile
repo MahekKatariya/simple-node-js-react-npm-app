@@ -9,5 +9,5 @@ RUN npm install
  
 COPY . .
  
- RUN npm start
+ RUN npm start &
 # CMD [ "node", "server.js" ]
