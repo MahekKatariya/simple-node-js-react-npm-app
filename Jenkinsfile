@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test'){
             steps{
-            sh 'npm test'
+            echo "port:3000"
             }
         }
     }
