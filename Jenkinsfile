@@ -9,6 +9,7 @@ pipeline {
             def customImage = docker.build("hello-world:${env.BUILD_ID}")
             customImage.push()
           }
+        }
       }
     }
   }
